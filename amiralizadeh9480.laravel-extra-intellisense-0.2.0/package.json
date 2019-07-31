@@ -1,0 +1,62 @@
+{
+	"name": "laravel-extra-intellisense",
+	"displayName": "Laravel Extra Intellisense",
+	"description": "better intellisense for laravel projects.",
+	"version": "0.2.0",
+	"publisher": "amiralizadeh9480",
+	"icon": "images/icon.png",
+	"engines": {
+		"vscode": "^1.30.0"
+	},
+	"categories": [
+		"Languages"
+	],
+	"activationEvents": [
+		"onLanguage:php",
+		"onLanguage:blade"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/amir9480/vscode-laravel-extra-intellisense"
+	},
+	"main": "./dist/extension.js",
+	"contributes": {
+		"configuration": [
+			{
+				"title": "Laravel Extra Intellisense",
+				"type": "object",
+				"properties": {
+					"LaravelExtraIntellisense.customValidationRules": {
+						"type": "object",
+						"default": {},
+						"description": "Custom validation rules snippets."
+					}
+				}
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "webpack --mode production",
+		"compile": "webpack --mode none",
+		"watch": "webpack --mode none --watch",
+		"test": "tsc -p ./"
+	},
+	"dependencies": {
+		"php-parser": "^3.0.0-prerelease.8"
+	},
+	"devDependencies": {
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^12.0.8",
+		"ts-loader": "^6.0.3",
+		"tslint": "^5.17.0",
+		"typescript": "^3.5.2",
+		"vscode": "^1.1.34",
+		"webpack": "^4.34.0",
+		"webpack-cli": "^3.3.4"
+	},
+	"__metadata": {
+		"id": "b52072d1-e507-4261-8935-f4d91a055d7d",
+		"publisherId": "408616ef-0321-4001-b2f0-ae74e0f71aa2",
+		"publisherDisplayName": "amir"
+	}
+}
